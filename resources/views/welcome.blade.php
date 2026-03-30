@@ -16,10 +16,10 @@
         <div class="relative z-10 max-w-md mx-auto px-5 flex flex-col items-center text-center">
             
             <!-- Logos -->
-            <div class="flex items-center justify-center gap-6 mb-8 w-full bg-white p-5 rounded-[24px] shadow-xl border border-slate-100 relative">
-                <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="h-14">
-                <div class="w-px h-12 bg-slate-200"></div>
-                <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="h-16">
+            <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 w-full bg-white p-4 md:p-5 rounded-[24px] shadow-xl border border-slate-100 relative">
+                <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="h-8 md:h-14 object-contain">
+                <div class="hidden sm:block w-px h-10 md:h-12 bg-slate-200"></div>
+                <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="h-10 md:h-16 object-contain">
             </div>
 
             <h1 class="text-xl md:text-2xl font-bold mb-8 text-secondary-500">
@@ -349,7 +349,7 @@
         function handleFormSubmit(e) {
             e.preventDefault();
 
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyGfw2NQy_TN1ngPQoNScIbkioi15q16cBvwsygAn2BEFgTYDrskRIeebuqaLsfRXdcNA/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ryCqGwFYGNct49cumg08ytM1ruZa6e6Rz8M1x9tSIhNxSkECV6x4f0OJdMMpiP4Uhw/exec';
 
             const form = e.target;
             const submitBtn = form.querySelector('.submit-button');
