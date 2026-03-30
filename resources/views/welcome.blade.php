@@ -22,14 +22,16 @@
                 <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="flex-1 h-20 md:h-16 object-contain min-w-0">
             </div>
 
-            <div class="mb-14 text-center px-4">
-                <h1 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+            <div class="mb-8 text-center px-4">
+                <h1 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight leading-tight">
                     ملتقى الأوقاف لعام 1447هـ
                 </h1>
                 
+                <p class="text-white/80 text-sm md:text-base mb-4">تحت شعار</p>
+                
                 <div class="flex flex-col items-center">
                     <div class="inline-block relative">
-                        <div class="text-secondary-500 text-lg md:text-2xl font-bold border-y-2 border-secondary-500/20 py-3 px-8 md:px-12">
+                        <div class="text-secondary-500 text-lg md:text-xl font-bold border-y-2 border-secondary-500/20 py-2 px-6 md:px-8">
                             الواقفون الجُدد والمصارف المُبتكرة
                         </div>
                     </div>
