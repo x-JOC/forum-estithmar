@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,7 +5,56 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-ExtBd.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('../../public/font/itfRawasiDisplayARLT-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 @theme {
-    --font-sans: 'Cairo', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Rawasi', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Custom Colors */
+    --color-primary-500: #005358;
+    --color-primary-600: #004448;
+    --color-primary-700: #003034;
+    --color-secondary-500: #ceaf87;
+    --color-secondary-600: #b59873;
+    --color-secondary-400: #e3caa7;
+    --color-accent-500: #8b9d90;
+    --color-danger-500: #e8493c;
+    --color-success-500: #00b48d;
+    --color-tertiary-500: #149b9e;
 }
