@@ -1,0 +1,49 @@
+{
+  "public/font/itfRawasiDisplayARLT-Black.otf": {
+    "file": "assets/itfRawasiDisplayARLT-Black-Wdcxi9WX.otf",
+    "src": "public/font/itfRawasiDisplayARLT-Black.otf"
+  },
+  "public/font/itfRawasiDisplayARLT-Bold.otf": {
+    "file": "assets/itfRawasiDisplayARLT-Bold-CamOAu1v.otf",
+    "src": "public/font/itfRawasiDisplayARLT-Bold.otf"
+  },
+  "public/font/itfRawasiDisplayARLT-ExtBd.otf": {
+    "file": "assets/itfRawasiDisplayARLT-ExtBd-BYIynDGj.otf",
+    "src": "public/font/itfRawasiDisplayARLT-ExtBd.otf"
+  },
+  "public/font/itfRawasiDisplayARLT-Light.otf": {
+    "file": "assets/itfRawasiDisplayARLT-Light-DN0Z_vyX.otf",
+    "src": "public/font/itfRawasiDisplayARLT-Light.otf"
+  },
+  "public/font/itfRawasiDisplayARLT-Medium.otf": {
+    "file": "assets/itfRawasiDisplayARLT-Medium-bseUXHsy.otf",
+    "src": "public/font/itfRawasiDisplayARLT-Medium.otf"
+  },
+  "public/font/itfRawasiDisplayARLT-Regular.otf": {
+    "file": "assets/itfRawasiDisplayARLT-Regular-DuG-rxz7.otf",
+    "src": "public/font/itfRawasiDisplayARLT-Regular.otf"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-Cn2yC36P.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "assets": [
+      "assets/itfRawasiDisplayARLT-Black-Wdcxi9WX.otf",
+      "assets/itfRawasiDisplayARLT-ExtBd-BYIynDGj.otf",
+      "assets/itfRawasiDisplayARLT-Bold-CamOAu1v.otf",
+      "assets/itfRawasiDisplayARLT-Medium-bseUXHsy.otf",
+      "assets/itfRawasiDisplayARLT-Regular-DuG-rxz7.otf",
+      "assets/itfRawasiDisplayARLT-Light-DN0Z_vyX.otf"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BU6mFzGd.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
