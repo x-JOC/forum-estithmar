@@ -349,7 +349,7 @@
         function handleFormSubmit(e) {
             e.preventDefault();
 
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ryCqGwFYGNct49cumg08ytM1ruZa6e6Rz8M1x9tSIhNxSkECV6x4f0OJdMMpiP4Uhw/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbZyMuoZ_xSuW3HH8-wjjD3XPywJDRPTKDfd6lIecIWpVsKVQygk1CmmCYskRsJr5qqA/exec';
 
             const form = e.target;
             const submitBtn = form.querySelector('.submit-button');
