@@ -16,10 +16,10 @@
         <div class="relative z-10 max-w-md mx-auto px-5 flex flex-col items-center text-center">
             
             <!-- Logos -->
-            <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 w-full bg-white p-4 md:p-5 rounded-[24px] shadow-xl border border-slate-100 relative">
-                <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="h-8 md:h-14 object-contain">
-                <div class="hidden sm:block w-px h-10 md:h-12 bg-slate-200"></div>
-                <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="h-10 md:h-16 object-contain">
+            <div class="flex flex-nowrap items-center justify-between gap-3 md:gap-6 mb-8 w-full bg-white px-3 py-4 md:p-5 rounded-[24px] shadow-xl border border-slate-100 relative">
+                <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="flex-1 h-14 md:h-14 object-contain min-w-0">
+                <div class="w-px h-10 md:h-12 bg-slate-200 shrink-0"></div>
+                <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="flex-1 h-20 md:h-16 object-contain min-w-0">
             </div>
 
             <h1 class="text-xl md:text-2xl font-bold mb-8 text-secondary-500">
