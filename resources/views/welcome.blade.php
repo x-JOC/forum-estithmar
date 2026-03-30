@@ -22,10 +22,19 @@
                 <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="flex-1 h-20 md:h-16 object-contain min-w-0">
             </div>
 
-            <h1 class="text-xl md:text-2xl font-bold mb-8 text-secondary-500">
-                الواقفون الجُدد والمصارف المُبتكرة
-            </h1>
-            
+            <div class="mb-14 text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+                    ملتقى الأوقاف لعام 1447هـ
+                </h1>
+                
+                <div class="flex flex-col items-center">
+                    <div class="inline-block relative">
+                        <div class="text-secondary-500 text-lg md:text-2xl font-bold border-y-2 border-secondary-500/20 py-3 px-8 md:px-12">
+                            الواقفون الجُدد والمصارف المُبتكرة
+                        </div>
+                    </div>
+                </div>
+            </div>            
             <!-- Emir Info -->
             <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full shadow-md mb-8 relative">
                 <img src="{{ asset('images/emir_of_madina.png') }}" alt="أمير منطقة المدينة المنورة" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-500 shadow-lg object-cover bg-white">
@@ -37,7 +46,7 @@
 
             <!-- Participation details -->
             <p class="text-[15px] leading-relaxed text-white mb-8 px-2">
-                تُشارك منظومة استثمار المستقبل في ملتقى الأوقاف <span class="text-secondary-500 font-bold">كراعي ماسي</span> بصحبة نخبة من مستشاريها، لتقديم خدمات استشارية مجانية خاصة بزوار جناحها في الملتقى
+                تُشارك منظومة استثمار المستقبل القابضة في ملتقى الأوقاف <span class="text-secondary-500 font-bold">كراعي ماسي</span> بصحبة نخبة من مستشاريها، لتقديم خدمات استشارية مجانية خاصة بزوار جناحها في الملتقى
             </p>
 
             <div class="flex flex-col gap-3 w-full">
@@ -163,7 +172,7 @@
                     @for($i = 0; $i < 2; $i++)
                         @foreach($consultants as $consultant)
                         <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')" 
-                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-40 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
+                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-44 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
                             <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 border-2 border-tertiary-500/30 flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
                                 @if(!empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])))
                                     <img src="{{ asset('images/consultants/' . $consultant['image']) }}" alt="{{ $consultant['name'] }}" class="w-full h-full object-cover">
