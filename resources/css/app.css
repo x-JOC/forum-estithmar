@@ -54,7 +54,10 @@
     --color-secondary-600: #b59873;
     --color-secondary-400: #e3caa7;
     --color-accent-500: #8b9d90;
+    --color-danger-400: #f17b71;
     --color-danger-500: #e8493c;
+    --color-danger-600: #c9352a;
+    --color-danger-700: #a72820;
     --color-success-500: #00b48d;
     --color-tertiary-500: #149b9e;
 }
