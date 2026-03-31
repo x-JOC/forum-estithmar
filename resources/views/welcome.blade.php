@@ -235,13 +235,13 @@
                     <img src="{{ asset('images/logos/faradah.svg') }}" alt="فرادة" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/iwqf.svg') }}" alt="منصة إيوقاف" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    <img src="{{ asset('images/logos/sna.svg') }}" alt="سنا" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
                     <img src="{{ asset('images/logos/majales.svg') }}" alt="مجالس" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/sna.svg') }}" alt="سنا" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    <img src="{{ asset('images/logos/iwqf.svg') }}" alt="مؤسسة اي-وقف" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
                 </div>
             </div>
         </div>
