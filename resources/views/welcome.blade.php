@@ -132,10 +132,23 @@
                         <input type="tel" name="phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all text-right" placeholder="05xxxxxxxx" dir="ltr">
                     </div>
 
-                    <div>
+                    {{-- <div>
                         <label class="block text-sm font-bold text-primary-500 mb-1">الشركة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
                         <input type="text" name="company" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all" placeholder="اسم الشركة أو المؤسسة">
-                    </div>
+                    </div> --}}
+                    <div>
+                        <label class="block text-sm font-bold text-primary-500 mb-1">الاستشارة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
+                        <select name="service" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all">
+                            <option value="">اختر الاستشارة المطلوبة</option>
+                            <option value="استشارات الحوكمة">استشارات الحوكمة</option>
+                            <option value="استشارات شرعية وقانونية">استشارات شرعية وقانونية</option>
+                            <option value="استشارات التقنية">استشارات التقنية</option>
+                            <option value="استشارات إدارة وتشغيل الأوقاف">استشارات إدارة وتشغيل الأوقاف</option>
+                            <option value="استشارات العلاقات والتسويق">استشارات العلاقات والتسويق</option>
+                            <option value="استشارات التسويق والإعلام">استشارات التسويق والإعلام</option>
+                        </select>
+                    </div>  
+
                     <div>
                         <label class="block text-sm font-bold text-primary-500 mb-1">اكتب ملاحظة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
                         <textarea name="notes" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all resize-none" placeholder="نبذة عن متطلباتك..."></textarea>
@@ -174,7 +187,7 @@
                     @for($i = 0; $i < 2; $i++)
                         @foreach($consultants as $consultant)
                         <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')" 
-                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-44 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
+                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-50 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
                             <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 border-2 border-tertiary-500/30 flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
                                 @if(!empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])))
                                     <img src="{{ asset('images/consultants/' . $consultant['image']) }}" alt="{{ $consultant['name'] }}" class="w-full h-full object-cover">
@@ -221,7 +234,30 @@
             </button>
             @endif
         </div>
+        <!-- Affiliate Companies Section -->
+        <div class="w-full text-center mt-6">
+            <h3 class="text-lg font-bold text-primary-500 mb-6 relative inline-block">
+                الشركات التابعة
+                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-secondary-500 rounded-full"></span>
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-4 w-full">
+                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                    <img src="{{ asset('images/logos/faradah.svg') }}" alt="فرادة" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                    <img src="{{ asset('images/logos/iwqf.svg') }}" alt="منصة إيوقاف" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                    <img src="{{ asset('images/logos/majales.svg') }}" alt="مجالس" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                    <img src="{{ asset('images/logos/sna.svg') }}" alt="سنا" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
     </main>
+
 
     <!-- Footer Section -->
     <footer class="bg-primary-500 text-white pt-12 pb-10 px-6 text-center rounded-t-[40px] mt-4 relative overflow-hidden">
