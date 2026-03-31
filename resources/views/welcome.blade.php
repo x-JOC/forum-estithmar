@@ -9,12 +9,12 @@
 </head>
 <body class="bg-slate-50 text-base-text font-sans antialiased overflow-x-hidden relative">
     
-    <div id="floatingConsultBtn" class="fixed top-0 left-4 sm:left-6 z-[100] filter drop-shadow-2xl transition-all duration-500 hover:translate-y-1">
-        <button onclick="scrollToForm()" class="bg-gradient-to-b from-danger-500 to-danger-700 text-white flex flex-col items-center justify-start pt-4 pb-8 px-1.5 w-14 sm:w-16 rounded-b-sm border-t-0 group cursor-pointer outline-none shadow-[0_10px_25px_-5px_rgba(232,73,60,0.5)] hover:from-danger-400 hover:to-danger-600 active:scale-95 transition-all duration-300" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%); border-bottom: 2px solid rgba(0,0,0,0.15);">
-            <svg class="w-6 h-6 mb-2 animate-bounce drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div id="floatingConsultBtn" class="fixed bottom-6 left-4 sm:left-6 z-[100] transition-all duration-500">
+        <button onclick="scrollToForm()" class="bg-gradient-to-r from-danger-500 to-danger-700 text-white flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full shadow-[0_8px_20px_-4px_rgba(232,73,60,0.6)] hover:from-danger-400 hover:to-danger-600 hover:-translate-y-1 active:scale-95 transition-all duration-300 border border-white/20 group font-bold">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 animate-bounce drop-shadow-md shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-            <span class="text-[11px] sm:text-xs font-black leading-tight text-center drop-shadow-md tracking-wide">احجز<br>استشارتك المجانية</span>
+            <span class="text-xs sm:text-sm font-black drop-shadow-md tracking-wide">احجز استشارتك المجانية</span>
         </button>
     </div>
 
@@ -395,11 +395,11 @@
                     const bookingRect = bookingSection.getBoundingClientRect();
                     // If the user scrolls close to the booking section, hide the button
                     if (bookingRect.top <= window.innerHeight * 0.8) {
-                        floatingBtn.style.top = '-150px';
+                        floatingBtn.style.transform = 'translateY(150px)';
                         floatingBtn.style.opacity = '0';
                         floatingBtn.style.pointerEvents = 'none';
                     } else {
-                        floatingBtn.style.top = '0';
+                        floatingBtn.style.transform = 'translateY(0)';
                         floatingBtn.style.opacity = '1';
                         floatingBtn.style.pointerEvents = 'auto';
                     }
