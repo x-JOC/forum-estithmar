@@ -561,7 +561,7 @@
         function handleFormSubmit(e) {
             e.preventDefault();
 
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbZyMuoZ_xSuW3HH8-wjjD3XPywJDRPTKDfd6lIecIWpVsKVQygk1CmmCYskRsJr5qqA/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl5HP3-2vKvb9BlurN91YReRoQ1JUqkHKcDgJEKqLmBh2C-cYJB97g3gzSIqg_x8VkeQ/exec';
 
             const form = e.target;
             const submitBtn = form.querySelector('.submit-button');
