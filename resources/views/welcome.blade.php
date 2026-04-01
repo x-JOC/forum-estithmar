@@ -9,7 +9,7 @@
 </head>
 <body class="bg-slate-50 text-base-text font-sans antialiased overflow-x-hidden relative">
     
-    <div id="floatingConsultBtn" class="fixed bottom-6 left-4 sm:left-6 z-[100] transition-all duration-500">
+    <div id="floatingConsultBtn" class="lg:hidden fixed bottom-6 left-4 sm:left-6 z-[100] transition-all duration-500">
         <button onclick="scrollToForm()" class="bg-gradient-to-r from-danger-500 to-danger-700 text-white flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-4 rounded-full shadow-[0_8px_20px_-4px_rgba(232,73,60,0.6)] hover:from-danger-400 hover:to-danger-600 hover:-translate-y-1 active:scale-95 transition-all duration-300 border border-white/20 group font-bold">
             <svg class="w-5 h-5 sm:w-6 sm:h-6 animate-bounce drop-shadow-md shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -21,16 +21,23 @@
     <header class="relative bg-primary-500 text-white overflow-hidden pb-12 pt-6 rounded-b-[40px] shadow-lg">
         <div class="absolute inset-0 opacity-10" style="background-image: url('{{ asset('images/patterns.svg') }}'); background-size: cover; background-position: center;"></div>
         
-        <div class="relative z-10 max-w-md mx-auto px-5 flex flex-col items-center text-center">
+        <div class="relative z-10 max-w-md md:max-w-5xl lg:max-w-6xl mx-auto px-5 flex flex-col items-center text-center">
             
-            <div class="flex flex-nowrap items-center justify-between gap-3 md:gap-6 mb-8 w-full bg-white px-3 py-4 md:p-5 rounded-[24px] shadow-xl border border-slate-100 relative mt-4">
-                <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="flex-1 h-14 md:h-14 object-contain min-w-0">
-                <div class="w-px h-10 md:h-12 bg-slate-200 shrink-0"></div>
-                <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="flex-1 h-20 md:h-16 object-contain min-w-0">
-            </div>
+            <div class="flex flex-nowrap items-center justify-between gap-4 md:gap-8 mb-8 w-full bg-white px-5 py-4 md:py-6 md:px-8 rounded-[24px] shadow-xl border border-slate-100 relative mt-4">
+                
+                <div class="flex-1 flex justify-center items-center">
+                    <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل" class="h-12 md:h-16 lg:h-16 w-auto object-contain">
+                </div>
 
-            <div class="mb-8 text-center px-4">
-                <h1 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight leading-tight">
+                <div class="w-px h-12 md:h-16 bg-slate-200 shrink-0 mx-2"></div>
+
+                <div class="flex-1 flex justify-center items-center">
+                    <img src="{{ asset('images/forum-logo.svg') }}" alt="ملتقى الأوقاف" class="h-16 md:h-20 lg:h-24 w-auto object-contain">
+                </div>
+
+            </div>
+            <div class="mb-8 text-center px-4 max-w-3xl mx-auto">
+                <h1 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
                     ملتقى الأوقاف لعام 1447هـ
                 </h1>
                 
@@ -44,7 +51,8 @@
                     </div>
                 </div>
             </div>            
-            <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full shadow-md mb-8 relative">
+            
+            <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full md:max-w-xl mx-auto shadow-md mb-8 relative">
                 <img src="{{ asset('images/emir_of_madina.png') }}" alt="أمير منطقة المدينة المنورة" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-secondary-500 shadow-lg object-cover bg-white">
                 <p class="text-sm font-medium text-white/80 mb-2">برعاية كريمة وتشريف</p>
                 <h2 class="text-lg md:text-xl font-bold text-white mb-1">صاحب السمو الملكي الأمير</h2>
@@ -52,12 +60,12 @@
                 <p class="text-sm text-white/80">أمير منطقة المدينة المنورة</p>
             </div>
 
-            <p class="text-[15px] leading-relaxed text-white mb-8 px-2">
+            <p class="text-[15px] md:text-lg leading-relaxed text-white mb-8 px-2 max-w-3xl mx-auto">
                 تُشارك منظومة استثمار المستقبل القابضة في ملتقى الأوقاف <span class="text-secondary-500 font-bold">كراعي ماسي</span> بصحبة نخبة من مستشاريها، لتقديم خدمات استشارية مجانية خاصة بزوار جناحها في الملتقى
             </p>
 
-            <div class="flex flex-col gap-3 w-full">
-                <div class="flex items-center gap-4 bg-primary-600 p-4 rounded-xl border border-white/10 text-right">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-4 w-full md:max-w-3xl mx-auto justify-center">
+                <div class="flex items-center gap-4 bg-primary-600 p-4 rounded-xl border border-white/10 text-right md:flex-1">
                     <div class="w-12 h-12 rounded-full bg-tertiary-500/20 flex items-center justify-center shrink-0">
                         <svg class="w-6 h-6 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -69,7 +77,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-4 bg-primary-600 p-4 rounded-xl border border-white/10 text-right">
+                <div class="flex items-center gap-4 bg-primary-600 p-4 rounded-xl border border-white/10 text-right md:flex-1">
                     <div class="w-12 h-12 rounded-full bg-tertiary-500/20 flex items-center justify-center shrink-0">
                         <svg class="w-6 h-6 text-secondary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -85,100 +93,126 @@
         </div>
     </header>
 
-    <main class="px-5 py-12 flex flex-col items-center max-w-md mx-auto z-20 relative">
-        <div class="text-center mb-10 w-full">
-            <h2 class="text-2xl font-bold text-primary-500 mb-3">
-                شركة استثمار المستقبل
-            </h2>
-            <div class="w-16 h-1 bg-secondary-500 mx-auto rounded-full mb-4"></div>
-            <p class="text-[var(--color-base-text)] font-medium text-lg leading-relaxed">
-                تُعنى في تمكين قطاع الأوقاف والوصايا
-                <br>
-                مُنذ أكثر من 
-                <span class="text-primary-500 font-extrabold text-2xl mx-1">20</span> 
-                عامًا
-            </p>
-        </div>
-
-        <div class="w-full mb-12" id="bookingSection">
-            <button id="toggleFormBtn" class="w-full flex justify-center items-center gap-3 bg-secondary-500 hover:bg-secondary-600 text-primary-500 font-bold text-lg py-5 px-6 rounded-2xl shadow-lg shadow-secondary-500/30 transition-all mb-4 outline-none">
-                <svg class="w-6 h-6 text-primary-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="pointer-events-none">احجز استشارتك المجانية</span>
-            </button>
-
-            <div id="formContainer" class="bg-white rounded-[24px] shadow-xl shadow-primary-500/5 p-6 md:p-8 w-full border border-accent-500/20 relative overflow-hidden h-0 opacity-0 transition-all duration-500">
-                <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('{{ asset('images/patterns.svg') }}'); background-size: cover;"></div>
-                
-                <div class="relative z-10 text-center mb-6">
-                    <h3 class="text-xl font-bold text-primary-500 mb-2">
-                        سجل معلوماتك للتواصل
-                    </h3>
-                    <p class="text-[14px] text-[var(--color-base-text)] leading-relaxed mb-4">
-                        مع خبراء استثمار المستقبل المتخصصين في قطاع الأوقاف والوصايا.
+<main class="px-5 py-12 max-w-md md:max-w-5xl lg:max-w-7xl mx-auto z-20 relative w-full">
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start w-full">
+            
+            <div class="w-full lg:w-5/12 flex flex-col lg:sticky lg:top-6 lg:z-30 relative z-20">
+                <div class="text-center lg:text-right mb-10 w-full">
+                    <h2 class="text-2xl lg:text-3xl font-bold text-primary-500 mb-3">
+                        شركة استثمار المستقبل
+                    </h2>
+                    <div class="w-16 h-1 bg-secondary-500 mx-auto lg:mr-0 lg:ml-auto rounded-full mb-4"></div>
+                    <p class="text-[var(--color-base-text)] font-medium text-lg lg:text-xl leading-relaxed">
+                        تُعنى في تمكين قطاع الأوقاف والوصايا
+                        <br class="hidden lg:block">
+                        مُنذ أكثر من 
+                        <span class="text-primary-500 font-extrabold text-2xl lg:text-3xl mx-1">20</span> 
+                        عامًا
                     </p>
                 </div>
 
-                <form class="space-y-4 relative z-10" id="bookingForm" data-page-type="استشارة-ملتقى" onsubmit="handleFormSubmit(event)">
-                    <div>
-                        <label class="block text-sm font-bold text-primary-500 mb-1">الاسم <span class="text-danger-500">*</span></label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all" placeholder="الاسم الكريم">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-bold text-primary-500 mb-1">رقم الجوال <span class="text-danger-500">*</span></label>
-                        <input type="tel" name="phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all text-right" placeholder="05xxxxxxxx" dir="ltr">
-                    </div>
+                <div class="w-full mb-12 lg:mb-0" id="bookingSection">
+                    <button id="toggleFormBtn" class="w-full lg:hidden flex justify-center items-center gap-3 bg-secondary-500 hover:bg-secondary-600 text-primary-500 font-bold text-lg py-5 px-6 rounded-2xl shadow-lg shadow-secondary-500/30 transition-all mb-4 outline-none">
+                        <svg class="w-6 h-6 text-primary-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        <span class="pointer-events-none">احجز استشارتك المجانية</span>
+                    </button>
 
-                    <div>
-                        <label class="block text-sm font-bold text-primary-500 mb-1">الاستشارة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
-                        <select name="service" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all">
-                            <option value="">اختر الاستشارة المطلوبة</option>
-                            <option value="استشارات الحوكمة">استشارات الحوكمة</option>
-                            <option value="استشارات شرعية وقانونية">استشارات شرعية وقانونية</option>
-                            <option value="استشارات التقنية">استشارات التقنية</option>
-                            <option value="استشارات إدارة وتشغيل الأوقاف">استشارات إدارة وتشغيل الأوقاف</option>
-                            <option value="استشارات العلاقات والتسويق">استشارات العلاقات والتسويق</option>
-                            <option value="استشارات التسويق والإعلام">استشارات التسويق والإعلام</option>
-                        </select>
-                    </div>  
+                    <div id="formContainer" class="bg-white rounded-[24px] shadow-xl shadow-primary-500/5 p-6 md:p-8 w-full border border-accent-500/20 relative overflow-hidden h-0 opacity-0 transition-all duration-500">
+                        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('{{ asset('images/patterns.svg') }}'); background-size: cover;"></div>
+                        
+                        <div class="relative z-10 text-center lg:text-right mb-6">
+                            <h3 class="text-xl font-bold text-primary-500 mb-2">
+                                سجل معلوماتك للتواصل
+                            </h3>
+                            <p class="text-[14px] text-[var(--color-base-text)] leading-relaxed mb-4">
+                                مع خبراء استثمار المستقبل المتخصصين في قطاع الأوقاف والوصايا.
+                            </p>
+                        </div>
 
-                    <div>
-                        <label class="block text-sm font-bold text-primary-500 mb-1">اكتب ملاحظة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
-                        <textarea name="notes" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all resize-none" placeholder="نبذة عن متطلباتك..."></textarea>
-                    </div>
+                        <form class="space-y-4 relative z-10 text-right" id="bookingForm" data-page-type="استشارة-ملتقى" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label class="block text-sm font-bold text-primary-500 mb-1">الاسم <span class="text-danger-500">*</span></label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all" placeholder="الاسم الكريم">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-primary-500 mb-1">رقم الجوال <span class="text-danger-500">*</span></label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all text-right" placeholder="05xxxxxxxx" dir="ltr">
+                            </div>
 
-                    <div class="pt-3">
-                        <button type="submit" class="submit-button w-full flex justify-center items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-all">
-                            إرسال الطلب
-                        </button>
+                            <div>
+                                <label class="block text-sm font-bold text-primary-500 mb-1">الاستشارة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
+                                <select name="service" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all">
+                                    <option value="">اختر الاستشارة المطلوبة</option>
+                                    <option value="استشارات الحوكمة">استشارات الحوكمة</option>
+                                    <option value="استشارات شرعية وقانونية">استشارات شرعية وقانونية</option>
+                                    <option value="استشارات التقنية">استشارات التقنية</option>
+                                    <option value="استشارات إدارة وتشغيل الأوقاف">استشارات إدارة وتشغيل الأوقاف</option>
+                                    <option value="استشارات العلاقات والتسويق">استشارات العلاقات والتسويق</option>
+                                    <option value="استشارات التسويق والإعلام">استشارات التسويق والإعلام</option>
+                                </select>
+                            </div>  
+
+                            <div>
+                                <label class="block text-sm font-bold text-primary-500 mb-1">اكتب ملاحظة <span class="text-accent-500 font-normal text-xs">(اختياري)</span></label>
+                                <textarea name="notes" rows="3" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-success-500/50 focus:border-success-500 outline-none transition-all resize-none" placeholder="نبذة عن متطلباتك..."></textarea>
+                            </div>
+
+                            <div class="pt-3">
+                                <button type="submit" class="submit-button w-full flex justify-center items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-all">
+                                    إرسال الطلب
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
 
-
-        <div class="mb-8 w-full text-center" id="consultantsSection">
-            <h3 class="text-xl font-bold text-primary-500 mb-6 inline-block relative">
-                تعرّف على فريق منظومة استثمار المستقبل المُشارك
-                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-secondary-500 rounded-full"></span>
-            </h3>
-            
-            @php
-                $consultants = config('consultants', []);
-            @endphp
-
-            @if(!empty($consultants))
-            <div id="consultantsMarqueeContainer" class="relative overflow-hidden w-full mt-8 py-2" dir="rtl">
-                <div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
-                <div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+            <div class="w-full lg:w-7/12 flex flex-col gap-14 pt-2 relative z-10">
                 
-                <div class="flex w-max items-stretch animate-marquee-rtl gap-4 px-4 hover:[animation-play-state:paused]">
-                    @for($i = 0; $i < 2; $i++)
+                <div class="w-full text-center lg:text-right" id="consultantsSection">
+                    <h3 class="text-xl lg:text-2xl font-bold text-primary-500 mb-8 inline-block relative">
+                        تعرّف على فريق منظومة استثمار المستقبل المُشارك
+                        <span class="absolute -bottom-3 left-1/2 lg:left-auto lg:right-0 transform -translate-x-1/2 lg:translate-x-0 w-16 lg:w-1/2 h-1 bg-secondary-500 rounded-full"></span>
+                    </h3>
+                    
+                    @php
+                        $consultants = config('consultants', []);
+                    @endphp
+
+                    @if(!empty($consultants))
+                    <div id="consultantsMarqueeContainer" class="relative overflow-hidden w-full py-2 md:hidden" dir="rtl">
+                        <div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+                        <div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+                        
+                        <div class="flex w-max items-stretch animate-marquee-rtl gap-4 px-4 hover:[animation-play-state:paused]">
+                            @for($i = 0; $i < 2; $i++)
+                                @foreach($consultants as $consultant)
+                                <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')" 
+                                     class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-50 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
+                                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 border-2 border-tertiary-500/30 flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+                                        @if(!empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])))
+                                            <img src="{{ asset('images/consultants/' . $consultant['image']) }}" alt="{{ $consultant['name'] }}" class="w-full h-full object-cover">
+                                        @else
+                                            <svg class="w-8 h-8 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                            </svg>
+                                        @endif
+                                    </div>
+                                    <h4 class="text-sm font-bold text-primary-500 mb-1 text-center whitespace-normal mt-auto">{{ $consultant['name'] }}</h4>
+                                    <p class="text-xs text-success-500 font-bold text-center whitespace-normal">{{ $consultant['title'] }}</p>
+                                </div>
+                                @endforeach
+                            @endfor
+                        </div>
+                    </div>
+
+                    <div id="consultantsGridContainer" class="hidden md:grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4 transition-opacity duration-500">
                         @foreach($consultants as $consultant)
-                        <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')" 
-                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start w-50 shrink-0 h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
+                        <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')"
+                             class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
                             <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 border-2 border-tertiary-500/30 flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
                                 @if(!empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])))
                                     <img src="{{ asset('images/consultants/' . $consultant['image']) }}" alt="{{ $consultant['name'] }}" class="w-full h-full object-cover">
@@ -188,61 +222,43 @@
                                     </svg>
                                 @endif
                             </div>
-                            <h4 class="text-sm font-bold text-primary-500 mb-1 text-center whitespace-normal mt-auto">{{ $consultant['name'] }}</h4>
-                            <p class="text-xs text-success-500 font-bold text-center whitespace-normal">{{ $consultant['title'] }}</p>
+                            <h4 class="text-sm font-bold text-primary-500 mb-1 text-center mt-auto">{{ $consultant['name'] }}</h4>
+                            <p class="text-xs text-success-500 font-bold text-center">{{ $consultant['title'] }}</p>
                         </div>
                         @endforeach
-                    @endfor
-                </div>
-            </div>
-
-            <div id="consultantsGridContainer" style="display: none;" class="grid-cols-2 lg:grid-cols-3 gap-4 mt-8 opacity-0 transition-opacity duration-500">
-                @foreach($consultants as $consultant)
-                <div onclick="openConsultantModal('{{ $consultant['name'] }}', '{{ $consultant['title'] }}', '{{ $consultant['bio'] ?? '' }}', '{{ !empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])) ? asset('images/consultants/' . $consultant['image']) : '' }}')"
-                     class="bg-white rounded-2xl p-4 shadow-sm border border-accent-500/20 flex flex-col items-center justify-start h-full cursor-pointer hover:border-secondary-500/50 transition-colors group">
-                    <div class="w-16 h-16 rounded-full bg-slate-100 mb-3 border-2 border-tertiary-500/30 flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
-                        @if(!empty($consultant['image']) && file_exists(public_path('images/consultants/' . $consultant['image'])))
-                            <img src="{{ asset('images/consultants/' . $consultant['image']) }}" alt="{{ $consultant['name'] }}" class="w-full h-full object-cover">
-                        @else
-                            <svg class="w-8 h-8 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                        @endif
                     </div>
-                    <h4 class="text-sm font-bold text-primary-500 mb-1 text-center mt-auto">{{ $consultant['name'] }}</h4>
-                    <p class="text-xs text-success-500 font-bold text-center">{{ $consultant['title'] }}</p>
-                </div>
-                @endforeach
-            </div>
 
-            <button id="toggleConsultantsBtn" class="mt-6 inline-flex items-center gap-2 text-primary-500 font-bold text-sm bg-primary-500/10 hover:bg-primary-500/20 px-5 py-2.5 rounded-full transition-all duration-300 outline-none">
-                <span>عرض جميع المستشارين</span>
-                <svg class="w-4 h-4 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-            @endif
-        </div>
-        
-        <div class="w-full text-center mt-6">
-            <h3 class="text-lg font-bold text-primary-500 mb-6 relative inline-block">
-                الشركات التابعة
-                <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-secondary-500 rounded-full"></span>
-            </h3>
-            
-            <div class="grid grid-cols-2 gap-4 w-full">
-                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/faradah.svg') }}" alt="فرادة" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    <button id="toggleConsultantsBtn" class="mt-6 inline-flex items-center gap-2 text-primary-500 font-bold text-sm bg-primary-500/10 hover:bg-primary-500/20 px-5 py-2.5 rounded-full transition-all duration-300 outline-none md:hidden">
+                        <span>عرض جميع المستشارين</span>
+                        <svg class="w-4 h-4 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    @endif
                 </div>
-                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/sna.svg') }}" alt="سنا" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                
+                <div class="w-full text-center lg:text-right">
+                    <h3 class="text-lg lg:text-xl font-bold text-primary-500 mb-8 relative inline-block">
+                        الشركات التابعة
+                        <span class="absolute -bottom-3 left-1/2 lg:left-auto lg:right-0 transform -translate-x-1/2 lg:translate-x-0 w-12 lg:w-1/2 h-1 bg-secondary-500 rounded-full"></span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
+                        <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                            <img src="{{ asset('images/logos/faradah.svg') }}" alt="فرادة" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                            <img src="{{ asset('images/logos/sna.svg') }}" alt="سنا" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                            <img src="{{ asset('images/logos/majales.svg') }}" alt="مجالس" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
+                            <img src="{{ asset('images/logos/iwqf.svg') }}" alt="مؤسسة اي-وقف" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/majales.svg') }}" alt="مجالس" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="bg-white rounded-[20px] shadow-sm border border-slate-100 p-4 flex items-center justify-center h-24 transition-all hover:border-secondary-500/50 hover:shadow-md group">
-                    <img src="{{ asset('images/logos/iwqf.svg') }}" alt="مؤسسة اي-وقف" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
-                </div>
+
             </div>
         </div>
     </main>
@@ -250,7 +266,7 @@
     <footer class="bg-primary-500 text-white pt-12 pb-10 px-6 text-center rounded-t-[40px] mt-4 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10" style="background-image: url('{{ asset('images/patterns.svg') }}'); background-size: cover; background-position: center;"></div>
         
-        <div class="relative z-10 max-w-md mx-auto">
+        <div class="relative z-10 max-w-md md:max-w-5xl lg:max-w-6xl mx-auto">
             <img src="{{ asset('images/logo-white.svg') }}" alt="استثمار المستقبل" class="h-12 mx-auto mb-6">
             
             <h3 class="text-xl font-bold mb-6 text-secondary-500">تواصـــل معنا</h3>
@@ -317,6 +333,22 @@
             padding: 2rem;
             margin-bottom: 2rem;
         }
+
+        /* تحسينات قوية للشاشات الكبيرة بحيث يكون النموذج مفتوح وثابت دائماً */
+        @media (min-width: 1024px) {
+            #formContainer {
+                height: auto !important;
+                opacity: 1 !important;
+                padding: 2rem !important;
+                margin-bottom: 0 !important;
+                overflow: visible !important;
+                pointer-events: auto !important;
+            }
+            #toggleFormBtn {
+                display: none !important;
+            }
+        }
+
         .toast-container {
             position: fixed;
             bottom: 24px;
@@ -360,40 +392,38 @@
     </style>
 
     <script>
-        // دالة التمرير وفتح النموذج المرتبطة بالشريط العلوي الثابت
         function scrollToForm() {
             const toggleBtn = document.getElementById('toggleFormBtn');
             const formContainer = document.getElementById('formContainer');
             const bookingSection = document.getElementById('bookingSection');
 
             if (toggleBtn && formContainer && bookingSection) {
-                // افتح النموذج إذا كان مغلقاً
-                if (!formContainer.classList.contains('expanded')) {
+                // فتح النموذج فقط إذا كان مخفياً وفي شاشات الجوال/التابلت
+                if (!formContainer.classList.contains('expanded') && window.innerWidth < 1024) {
                     toggleBtn.click();
                 }
 
-                // التمرير بحساب المسافة المطلوبة مع تجنب تغطية الشريط للعنوان
                 setTimeout(() => {
-                    const yOffset = -70; // مسافة لإبعاد الشريط العلوي الثابت
+                    const yOffset = -70; 
                     const y = bookingSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     
                     window.scrollTo({
                         top: y,
                         behavior: 'smooth'
                     });
-                }, 300); // تأخير بسيط جداً للسماح للأنيميشن بالبدء
+                }, 300);
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Floating Button Scroll Logic
             const floatingBtn = document.getElementById('floatingConsultBtn');
             const bookingSection = document.getElementById('bookingSection');
             
             if (floatingBtn && bookingSection) {
                 window.addEventListener('scroll', () => {
+                    if (window.innerWidth >= 1024) return; // تعطيل حركة الزر في الشاشات الكبيرة
+
                     const bookingRect = bookingSection.getBoundingClientRect();
-                    // If the user scrolls close to the booking section, hide the button
                     if (bookingRect.top <= window.innerHeight * 0.8) {
                         floatingBtn.style.transform = 'translateY(150px)';
                         floatingBtn.style.opacity = '0';
@@ -406,7 +436,6 @@
                 });
             }
 
-            // Expandable Form Logic
             const toggleBtn = document.getElementById('toggleFormBtn');
             const formContainer = document.getElementById('formContainer');
 
@@ -425,7 +454,6 @@
                 });
             }
 
-            // Consultants Toggle Logic
             const toggleConsultantsBtn = document.getElementById('toggleConsultantsBtn');
             const consultantsMarqueeContainer = document.getElementById('consultantsMarqueeContainer');
             const consultantsGridContainer = document.getElementById('consultantsGridContainer');
@@ -438,10 +466,12 @@
                     const svg = toggleConsultantsBtn.querySelector('svg');
                     
                     if (isConsultantsOpen) {
-                        consultantsMarqueeContainer.style.display = 'none';
-                        consultantsGridContainer.style.display = 'grid';
+                        consultantsGridContainer.classList.remove('hidden');
+                        consultantsGridContainer.classList.add('grid');
+                        consultantsGridContainer.style.display = 'grid'; 
+                        consultantsMarqueeContainer.classList.add('hidden');
+                        
                         setTimeout(() => {
-                            consultantsGridContainer.classList.remove('opacity-0');
                             consultantsGridContainer.classList.add('opacity-100');
                         }, 50);
                         
@@ -449,11 +479,12 @@
                         svg.classList.add('rotate-180');
                     } else {
                         consultantsGridContainer.classList.remove('opacity-100');
-                        consultantsGridContainer.classList.add('opacity-0');
                         
                         setTimeout(() => {
-                            consultantsGridContainer.style.display = 'none';
-                            consultantsMarqueeContainer.style.display = 'block';
+                            consultantsGridContainer.style.display = ''; 
+                            consultantsGridContainer.classList.remove('grid');
+                            consultantsGridContainer.classList.add('hidden');
+                            consultantsMarqueeContainer.classList.remove('hidden');
                         }, 500);
                         
                         span.textContent = 'عرض جميع المستشارين';
@@ -463,7 +494,6 @@
             }
         });
 
-        // Consultant Modal Functions
         function openConsultantModal(name, title, bio, imageSrc) {
             const modal = document.getElementById('consultantModal');
             const modalContent = modal.querySelector('div:last-child');
@@ -498,7 +528,6 @@
             document.body.style.overflow = '';
         }
 
-        // Device Detection Functions
         function getDeviceType() {
             const ua = navigator.userAgent;
             if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -557,7 +586,6 @@
             return os;
         }
 
-        // Form Submission Handler
         function handleFormSubmit(e) {
             e.preventDefault();
 
@@ -606,12 +634,15 @@
                     showToast('شكراً لك! تم استلام طلبك وسنتواصل معك قريباً.');
                     form.reset();
                     
-                    const toggleBtn = document.getElementById('toggleFormBtn');
-                    const formContainer = document.getElementById('formContainer');
-                    if(toggleBtn && formContainer) {
-                        toggleBtn.classList.remove('active');
-                        formContainer.classList.remove('expanded');
-                        toggleBtn.querySelector('span').textContent = 'احجز استشارتك المجانية';
+                    // إعادة النموذج لحالته المخفية (فقط على الجوال)
+                    if (window.innerWidth < 1024) {
+                        const toggleBtn = document.getElementById('toggleFormBtn');
+                        const formContainer = document.getElementById('formContainer');
+                        if(toggleBtn && formContainer) {
+                            toggleBtn.classList.remove('active');
+                            formContainer.classList.remove('expanded');
+                            toggleBtn.querySelector('span').textContent = 'احجز استشارتك المجانية';
+                        }
                     }
 
                     submitBtn.disabled = false;
@@ -643,12 +674,14 @@
 
                 showToast('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.');
                 
-                const toggleBtn = document.getElementById('toggleFormBtn');
-                const formContainer = document.getElementById('formContainer');
-                if(toggleBtn && formContainer) {
-                    toggleBtn.classList.add('active');
-                    formContainer.classList.add('expanded');
-                    toggleBtn.querySelector('span').textContent = 'إخفاء نموذج الحجز';
+                if (window.innerWidth < 1024) {
+                    const toggleBtn = document.getElementById('toggleFormBtn');
+                    const formContainer = document.getElementById('formContainer');
+                    if(toggleBtn && formContainer) {
+                        toggleBtn.classList.add('active');
+                        formContainer.classList.add('expanded');
+                        toggleBtn.querySelector('span').textContent = 'إخفاء نموذج الحجز';
+                    }
                 }
 
                 submitBtn.disabled = false;
